@@ -25,7 +25,7 @@ RUN wget https://github.com/novnc/noVNC/archive/refs/heads/master.zip -O /tmp/no
     rm -rf /tmp/novnc.zip /tmp/noVNC-master
 
 
-ENV ISO_URL="https://archive.org/download/windows-10-lite-edition-19h2-x64/Windows%2010%20Lite%20Edition%2019H2%20x64.iso"
+ENV ISO_URL="https://archive.org/download/Windows_7_Ultimate_SP1_x64_MSDN/en_windows_7_ultimate_with_sp1_x64_dvd_u_677332.iso"
 
 
 RUN echo '#!/bin/bash\n\
@@ -48,7 +48,7 @@ fi\n\
 \n\
 # Download ISO if needed\n\
 if [ ! -f "/iso/os.iso" ]; then\n\
-  echo "📥 Downloading Windows 10 ISO..."\n\
+  echo "📥 Downloading Windows 7 ultimate edition ISO..."\n\
   wget -q --show-progress "$ISO_URL" -O "/iso/os.iso"\n\
 fi\n\
 \n\
